@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Thermostat</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class='container'>
+      <h1>My Sweet Thermo</h1>
+
+      <div class="row" style="margin-top:5em;">
+        <div class="col-md-4 text-right">
+          <p>
+            <button id="power-saving" type="button" class="btn btn-success btn-default">Power Saving</button>
+          </p>
+          <p>
+          <button id="reset" type="button" class="btn btn-warning btn-xs">RESET</button>
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h2>20 ºC</h2>
+          <h3>LOW USAGE</h3>
+          <p class="bg-success">Power Saving Mode ON</p>
+
+        </div>
+        <div class="col-md-4 text-left">
+          <p>
+            <button id="up" type="button" class="btn btn-primary btn-default">UP</button>
+          </p>
+          <p>
+          <button id="down" type="button" class="btn btn-primary btn-default">DOWN</button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/Thermostat.js"></script>
+  </body>
+</html>
