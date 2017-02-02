@@ -30,6 +30,22 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(20)
   });
 
+  describe('Energy report', function() {
+    it('low usage if temperature under 18 degrees', function(){
+      thermostat.temperature = 17
+      console.log(thermostat.currentUsage())
+      expect(thermostat.currentUsage()).toEqual('Low')
+    });
+    it('medium usage if temperature between 18 and 25 degrees', function(){
+      thermostat.temperature = 22
+      expect(thermostat.currentUsage()).toEqual('Medium')
+    });
+    it('high usage if temperature >= 25 degrees', function(){
+      thermostat.temperature = 26
+      expect(thermostat.currentUsage()).toEqual('High')
+    });
+  });
+
   describe('Power saving mode', function() {
 
     it('is on by default', function(){
