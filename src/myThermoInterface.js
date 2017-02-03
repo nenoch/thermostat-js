@@ -39,8 +39,13 @@ $( document ).ready(function() {
 
      function updateUsage(){
        $("h3#usage-display").text(thermostat.currentUsage() + " Usage");
+       if (thermostat.currentUsage() == "Low") {
+         $("h3#usage-display").css('color', 'green');
+       } else if (thermostat.currentUsage() == "Medium") {
+         $("h3#usage-display").css('color', 'black');
+       } else
+        $("h3#usage-display").css('color', 'red');
      };
-
 
 
 });
